@@ -4,7 +4,7 @@ Rock Paper Scissors Game
 
 function getComputerChoice(){
     /* 
-    Generates random number from 0 to 100 that will determine computer choice
+    Generates random number from 0 to 100 that will determine computer choice.
 
     Args: None
     Return: computer choice (e.g: "Paper", "Scissor", or "Rock")
@@ -19,4 +19,16 @@ function getComputerChoice(){
         return computerChoice = "Scissors";
     }
 }
-console.log(getComputerChoice());
+
+function getHumanChoice(){
+    /*
+    Prompts user to enter an answer.
+
+    Args: None
+    Return: human choice (e.g: "Paper", "Scissor", or "Rock")
+    */
+    const message = "Rock, Paper, Scissors?";
+    let answer = prompt(message);
+    return answer;
+}
+console.log(getHumanChoice());
