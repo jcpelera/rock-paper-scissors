@@ -98,15 +98,18 @@ function playGame(){
      * args: none.
      * return: results of the game.
      */
-    for(let i = 0; i < 5; i++){
-        console.log(playRound(getHumanChoice(), getComputerChoice));
-    }
-    console.log("Your Final Score " + humanScore);
-    console.log("Final Computer Score "+computerScore);
-    if(humanScore > computerScore){
-        return "You Win!";
-    }else {
-        return "You Lose!";
-    }
+  const rockBtn = document.getElementById('rock');
+  const paperBtn = document.getElementById('paper');
+  const scissorsBtn = document.getElementById('scissors');
+  rockBtn.addEventListener("click", () => {
+    playRound('rock', getComputerChoice());
+  });
+
+  paperBtn.addEventListener("click", () => {
+    playRound('paper', getComputerChoice());
+  });
+  scissorsBtn.addEventListener("click", () => {
+    playRound('scissors', getComputerChoice());
+  });
 }
 console.log(playGame());
